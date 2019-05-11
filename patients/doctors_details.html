@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% if doctors_list %}
+    <ul>
+        {%for d in doctors_list%}
+            <li>
+               <!-- <a href="/patients/{{d.id}}"><i><b>{{d.name}}:</b> </i><i>{{d.specialization}}</i></a>-->
+                <a href="/patients/login/"><i><b>{{d.name}}:</b> </i><i>{{d.specialization}}</i></a>
+            </li>
+        {%endfor%}
+    </ul>
+{% else %}
+    <p>"There are not doctors. Please add some.</p>
+{% endif %}
+
+</body>
+</html>
