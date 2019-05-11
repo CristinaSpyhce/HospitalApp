@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{%if doctor.patient_set%}
+    <ol>
+        {%for patient in doctor.patient_set.all%}
+            <li>
+                <a href="/patients/{{doctor.id}}/details/{{patient.id}}"><strong>{{patient.name}}</strong></a>
+            </li>
+        {%endfor%}
+    </ol>
+{%else%}
+    <p>You have no patients</p>
+{%endif%}
+
+</body>
+</html>

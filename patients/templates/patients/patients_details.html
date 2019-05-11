@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{%if patient%}
+<ol>
+    <li>Varsta: {{patient.age}}</li>
+    <li>Adult/Copil: {{ patient.child_or_not }}</li>
+    <li>Diagnostic: {{ patient.diagnostic }}</li>
+    <li>Numar consultatii: {{ patient.no_appointments }}</li>
+    <li>Tratamente aplicate: {{ patient.prescribed_treatment }}</li>
+</ol>
+{%else%}
+<p>No details to display</p>
+{%endif%}
+
+</body>
+</html>
